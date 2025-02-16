@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Theseus 3D | STL Upload</title>
+
+  <!-- Michroma Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Global Nav -->
+  <header>
+    <nav>
+      <a href="index.html" class="logo">Theseus 3D</a>
+      <ul class="nav-links">
+        <li><a href="products.html">Products</a></li>
+        <li><a href="custom-design.html">Custom Designs</a></li>
+        <li><a href="stl-upload.html" class="active">STL Upload</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="section stl-upload">
+    <h2>Already Have a 3D Model?</h2>
+    <p>Upload your STL file, and we’ll print it for you!</p>
+    <form id="stlForm" class="stl-form">
+      <div class="file-upload-wrapper">
+        <input
+          type="file"
+          id="fileInput"
+          accept=".stl"
+          style="display: none;"
+          onchange="showStlFileName()"
+          required
+        />
+        <label for="fileInput" class="file-upload-btn">Choose STL File</label>
+        <span id="stlFileName" class="file-name"></span>
+      </div>
+
+      <label for="details">Additional Details:</label>
+      <textarea
+        id="details"
+        name="details"
+        rows="4"
+        placeholder="Color, material, quantity..."
+      ></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+    <p id="stlMessage" class="form-message"></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Theseus 3D. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

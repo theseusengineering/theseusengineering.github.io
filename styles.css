@@ -1,0 +1,415 @@
+/* =======================
+   RESET & GLOBAL STYLES
+   ======================= */
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    /* Dark background and Michroma font for a futuristic look */
+    background-color: #121212;
+    color: #ffffff;
+    font-family: 'Michroma', serif;
+    line-height: 1.6;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* =======================
+     NAVIGATION
+     ======================= */
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background-color: #1f1f1f;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .nav-links li {
+    position: relative;
+  }
+  
+  .nav-links a {
+    color: #ffffff;
+    font-weight: 500;
+    padding: 0.5rem 0.7rem;
+    border-radius: 0.25rem;
+  }
+  
+  .nav-links a:hover {
+    background-color: #333333;
+  }
+  
+  .nav-links .active {
+    background-color: #3b82f6;
+  }
+  
+  /* =======================
+     HERO SECTION
+     ======================= */
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Sample background image; update to your own */
+    background: url("https://via.placeholder.com/1200x600/121212/ffffff?text=3D+Printing+Hero") center/cover no-repeat;
+    min-height: 70vh;
+    text-align: center;
+    position: relative;
+  }
+  
+  .hero-content {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    border-radius: 0.5rem;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero-content button {
+    padding: 0.7rem 1rem;
+    background-color: #3b82f6;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 0.25rem;
+  }
+  
+  .hero-content button:hover {
+    background-color: #2563eb;
+  }
+  
+  /* =======================
+     SECTIONS & GENERAL
+     ======================= */
+  .section {
+    padding: 3rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+  }
+  
+  /* =======================
+     FEATURED PRODUCT
+     ======================= */
+  .featured-product .product-feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .product-feature img {
+    width: 300px;
+    border-radius: 0.5rem;
+  }
+  
+  .product-feature-info {
+    text-align: center;
+  }
+  
+  .product-feature-info h3 {
+    margin-bottom: 0.5rem;
+  }
+  
+  .product-feature-info .price {
+    color: #3b82f6;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .product-feature-info button {
+    margin-top: 1rem;
+    padding: 0.7rem 1rem;
+    background-color: #3b82f6;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 0.25rem;
+  }
+  
+  .product-feature-info button:hover {
+    background-color: #2563eb;
+  }
+  
+  /* =======================
+     PRODUCT GRID
+     ======================= */
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 2rem;
+  }
+  
+  .product-card {
+    background-color: #1f1f1f;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    text-align: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  .product-card:hover {
+    background-color: #292929;
+  }
+  
+  .product-card img {
+    width: 100%;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .product-card h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+  }
+  
+  .price {
+    color: #3b82f6;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .product-card button {
+    padding: 0.5rem 1rem;
+    background-color: #3b82f6;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 0.25rem;
+  }
+  
+  .product-card button:hover {
+    background-color: #2563eb;
+  }
+  
+  /* =======================
+     PRODUCT DETAIL PAGE
+     ======================= */
+  .product-detail {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  
+  .product-detail-image img {
+    max-width: 500px;
+    border-radius: 0.5rem;
+  }
+  
+  .product-detail-info {
+    max-width: 500px;
+  }
+  
+  .product-detail-info h2 {
+    margin-bottom: 0.5rem;
+  }
+  
+  .product-detail-info .price {
+    color: #3b82f6;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+  
+  .product-detail-info .description {
+    margin-bottom: 1.5rem;
+  }
+  
+  .product-detail-info button {
+    padding: 0.7rem 1rem;
+    background-color: #3b82f6;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .product-detail-info button:hover {
+    background-color: #2563eb;
+  }
+  
+  /* =======================
+     CUSTOM DESIGN PAGE
+     ======================= */
+  .custom-design p,
+  .custom-design ul {
+    text-align: center;
+    max-width: 800px;
+    margin: 1rem auto;
+  }
+  
+  .custom-design ul {
+    list-style-type: none;
+    margin-bottom: 2rem;
+  }
+  
+  .custom-design ul li {
+    margin: 0.5rem 0;
+  }
+  .disclaimer {
+    text-align: center;
+    max-width: 800px;
+    font-size: 12px;
+    margin: 1rem auto;
+  }
+  
+  .custom-form-container {
+    background-color: #1f1f1f;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    max-width: 600px;
+    margin: 2rem auto 0 auto;
+  }
+  
+  .custom-form-container form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .custom-form-container label {
+    margin-top: 1rem;
+    margin-bottom: 0.3rem;
+  }
+  
+  .custom-form-container input,
+  .custom-form-container textarea {
+    padding: 0.5rem;
+    border: 1px solid #888;
+    border-radius: 0.25rem;
+    background-color: #232323;
+    color: #fff;
+  }
+  
+  /* =======================
+     STL UPLOAD PAGE
+     ======================= */
+  .stl-upload p {
+    text-align: center;
+    max-width: 800px;
+    margin: 1rem auto;
+  }
+  
+  .stl-form {
+    max-width: 600px;
+    margin: 2rem auto 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .stl-form label {
+    margin-top: 1rem;
+    margin-bottom: 0.3rem;
+  }
+  
+  .stl-form textarea {
+    padding: 0.5rem;
+    border: 1px solid #888;
+    border-radius: 0.25rem;
+    background-color: #232323;
+    color: #fff;
+  }
+  
+  /* =======================
+     FULLY CUSTOM FILE BUTTON
+     ======================= */
+  .file-upload-wrapper {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  /* Hide the real file input
+     (set inline in HTML) */
+  
+  .file-upload-btn {
+    background-color: #3b82f6;
+    color: #fff;
+    font-family: 'Michroma', serif;
+    padding: 0.7rem 1rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    display: inline-block;
+  }
+  
+  .file-upload-btn:hover {
+    background-color: #2563eb;
+  }
+  
+  .file-name {
+    font-family: 'Michroma', serif;
+    font-size: 0.9rem;
+  }
+  
+  /* =======================
+     FORMS (COMMON STYLES)
+     ======================= */
+  .stl-form button,
+  .custom-form-container button {
+    margin-top: 1rem;
+    padding: 0.7rem 1rem;
+    background-color: #3b82f6;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    font-family: 'Michroma', serif;
+  }
+  
+  .stl-form button:hover,
+  .custom-form-container button:hover {
+    background-color: #2563eb;
+  }
+  
+  /* Messages */
+  .form-message {
+    margin-top: 1rem;
+    color: #4ade80; /* success message color */
+    text-align: center;
+  }
+  
+  /* =======================
+     FOOTER
+     ======================= */
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #1f1f1f;
+    margin-top: 2rem;
+  }

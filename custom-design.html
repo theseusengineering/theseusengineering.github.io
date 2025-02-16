@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Theseus 3D | Custom Designs</title>
+
+  <!-- Michroma Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Global Nav -->
+  <header>
+    <nav>
+      <a href="index.html" class="logo">Theseus 3D</a>
+      <ul class="nav-links">
+        <li><a href="products.html">Products</a></li>
+        <li><a href="custom-design.html" class="active">Custom Designs</a></li>
+        <li><a href="stl-upload.html">STL Upload</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="section custom-design">
+    <h2>Custom 3D Design Services</h2>
+    <p>Have a unique idea in mind? We offer bespoke design services to turn your concepts into reality.</p>
+    <ul>
+      <li>Fill out the form, and we will be in contact to brainstorm and discuss your requirements.</li>
+      <li>We create a custom 3D model based on your specifications, and then print and deliver it to your door.</li>
+      <li class="disclaimer"> DISCLAIMER: 3D Prints that need to interact with everyday objects (eg. remote, pens) are very dependant on exact measurements. 
+        If you do not have calipers or you are unconfident with your measurements, we offer in-person digital scanning/measurements. 
+        There is a chance that if we only use your measurements, it may not fit upon first try. Any remodelling and redesigning will incur appropriate charges within reason. 
+        We offer free remodels and redesigns when using our in-person bespoke measurements.</li>
+    </ul>
+
+    <div class="custom-form-container">
+      <h3>Custom Design Request Form</h3>
+      <form id="customDesignForm">
+        <label for="customName">Name:</label>
+        <input type="text" id="customName" name="customName" required />
+
+        <label for="customEmail">Email:</label>
+        <input type="email" id="customEmail" name="customEmail" required />
+
+        <label for="customDescription">Project Description:</label>
+        <!-- Placeholder text to guide the user about what's helpful to include -->
+        <textarea
+          id="customDescription"
+          name="customDescription"
+          rows="4"
+          required
+          placeholder="Tell us about the product you want, what it’s for, and any measurements or reference photos you’d like us to consider..."
+        ></textarea>
+
+        <!-- Hidden file input + custom label for file uploads -->
+        <div class="file-upload-wrapper">
+          <input
+            type="file"
+            id="customImage"
+            name="customImage"
+            accept="image/*"
+            style="display: none;"
+            onchange="showCustomDesignFileName()"
+          />
+          <label for="customImage" class="file-upload-btn">Upload a Photo (optional)</label>
+          <span id="customImageFileName" class="file-name"></span>
+        </div>
+
+        <button type="submit">Submit Request</button>
+      </form>
+      <p id="customFormMessage" class="form-message"></p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Theseus 3D. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
