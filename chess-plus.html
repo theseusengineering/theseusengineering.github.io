@@ -21,6 +21,7 @@
         <li><a href="products.html">Products</a></li>
         <li><a href="custom-design.html">Custom Designs</a></li>
         <li><a href="stl-upload.html">STL Upload</a></li>
+        <li><a href="cart.html" id="cartLink">Cart</a></li>
       </ul>
     </nav>
   </header>
@@ -37,8 +38,14 @@
         This futuristic twist on a classic chess set includes innovative piece designs and a compact board. 
         Perfect for both enthusiasts and collectors who want something unique on their table.
       </p>
-      <button>Buy Now</button>
-      <button onclick="window.history.back()">Back to Products</button>
+      
+      <button
+  class="button-style add-to-cart"
+  data-product="Chess Plus"
+  data-price="39.99">
+  Add to Cart
+</button>
+      <button class="button-style" onclick="window.history.back()">Back to Products</button>
     </div>
   </section>
 

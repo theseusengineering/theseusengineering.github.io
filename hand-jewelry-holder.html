@@ -21,6 +21,7 @@
         <li><a href="products.html">Products</a></li>
         <li><a href="custom-design.html">Custom Designs</a></li>
         <li><a href="stl-upload.html">STL Upload</a></li>
+        <li><a href="cart.html" id="cartLink">Cart</a></li>
       </ul>
     </nav>
   </header>
@@ -37,8 +38,14 @@
         A stylish, hand-shaped holder for rings, bracelets, and other small accessories. 
         An elegant piece for your dresser or vanity.
       </p>
-      <button>Buy Now</button>
-      <button onclick="window.history.back()">Back to Products</button>
+      <button
+  class="button-style add-to-cart"
+  data-product="Hand Jewelry Holder"
+  data-price="19.99"
+>
+  Add to Cart
+</button>
+      <button class="button-style" onclick="window.history.back()">Back to Products</button>
     </div>
   </section>
 

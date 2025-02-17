@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Theseus 3D | Order Success</title>
+
+  <!-- Michroma Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Global Nav (optional) -->
+  <header>
+    <nav>
+      <a href="index.html" class="logo">Theseus 3D</a>
+      <ul class="nav-links">
+        <li><a href="products.html">Products</a></li>
+        <li><a href="custom-design.html">Custom Designs</a></li>
+        <li><a href="stl-upload.html">STL Upload</a></li>
+        <li><a href="cart.html">Cart</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="section success-section">
+    <h2>Thank you for your order!</h2>
+    <p id="orderMsg"></p>
+    <p>Your payment was successful. We’ll process your order soon.</p>
+    
+    <button onclick="location.href='index.html'">Return Home</button>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Theseus 3D. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Parse orderId from the URL query string
+    const urlParams = new URLSearchParams(window.location.search);
+    const orderId = urlParams.get('orderId');
+
+    // If the Node server appended "?orderId=someValue", display it
+    if (orderId) {
+      document.getElementById('orderMsg').textContent = `Order ID: ${orderId}`;
+    }
+  </script>
+</body>
+</html>

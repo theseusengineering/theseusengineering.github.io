@@ -119,7 +119,16 @@
     margin-bottom: 2rem;
     font-size: 2rem;
   }
-  
+  .explore-products {
+    font-family: 'Michroma', serif;
+    font-style: bold;
+  }
+  .button-style {
+    font-family: 'Michroma', serif;
+  }
+
+
+
   /* =======================
      FEATURED PRODUCT
      ======================= */
@@ -412,4 +421,39 @@
     padding: 1rem;
     background-color: #1f1f1f;
     margin-top: 2rem;
+  }
+
+  .cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+  }
+  
+  .cart-table th,
+  .cart-table td {
+    border-bottom: 1px solid #444;
+    padding: 0.75rem;
+    text-align: left;
+  }
+  
+  .cart-table th {
+    background-color: #1f1f1f;
+  }
+  
+  .remove-item {
+    background-color: #f87171; /* red-ish */
+    border: none;
+    color: #fff;
+    padding: 0.5rem;
+    cursor: pointer;
+    border-radius: 0.25rem;
+  }
+  
+  .remove-item:hover {
+    background-color: #ef4444; /* brighter red */
+  }
+  
+  .cart-summary {
+    text-align: right;
+    margin-top: 1rem;
   }

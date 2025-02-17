@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Theseus 3D | TV Remote Wall Mount</title>
+  <title>Theseus 3D | Cart</title>
 
   <!-- Michroma Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,9 +11,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css" />
+
 </head>
 <body>
-  <!-- Global Nav -->
   <header>
     <nav>
       <a href="index.html" class="logo">Theseus 3D</a>
@@ -21,38 +21,24 @@
         <li><a href="products.html">Products</a></li>
         <li><a href="custom-design.html">Custom Designs</a></li>
         <li><a href="stl-upload.html">STL Upload</a></li>
-        <li><a href="cart.html" id="cartLink">Cart</a></li>
+        <li><a href="cart.html" class="active">Cart</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Product Detail Section -->
-  <section class="section product-detail">
-    <div class="product-detail-image">
-      <img src="https://via.placeholder.com/500" alt="TV Remote Wall Mount" />
-    </div>
-    <div class="product-detail-info">
-      <h2>TV Remote Wall Mount</h2>
-      <p class="price">$14.99</p>
-      <p class="description">
-        Keep track of your TV remote(s) with this sleek wall mount. 
-        Easy to install and customizable for different remote sizes.
-      </p>
-      <button
-  class="button-style add-to-cart"
-  data-product="TV Remote Wall Mount"
-  data-price="14.99"
->
-  Add to Cart
-</button>
-      <button class="button-style" onclick="window.history.back()">Back to Products</button>
+  <section class="section cart">
+    <h2>Your Cart</h2>
+    <div id="cartItems"></div>
+    <div class="cart-summary">
+      <h3>Subtotal: $<span id="cartSubtotal">0.00</span></h3>
+      <button id="checkoutBtn">Checkout</button>
     </div>
   </section>
 
   <footer>
     <p>&copy; 2025 Theseus 3D. All rights reserved.</p>
   </footer>
-
+  <script src="https://js.stripe.com/v3"></script>
   <script src="script.js"></script>
 </body>
 </html>
